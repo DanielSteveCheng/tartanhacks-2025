@@ -3,10 +3,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeepClean</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/result.css')}}">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div id="cv_container">
         <img id="cv" src="{{ url_for('video_feed') }}" alt="">
+
+        <ul>
+            <li><h1>Marine Debris Detection</h1></li>
+            <li><p>Location: Currently Unavailable</p></li>
+            <li><p>Number of objects: Currently Unavailable</p></li>
+            <li><p>Notes: Object detection is successful,
+                however the speed of frame generation is very slow.
+                Further iterations would work to increase frame speed
+                and object count.
+            </p></li>
+            <li>
+
+                <form action="{{home}}">
+                    <input type="submit" value="Back to Home">
+                </form>
+
+            </li>
+        </ul>
+        
+
+        
     </div>
 </body>
 </html>

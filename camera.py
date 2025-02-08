@@ -3,7 +3,7 @@ from ultralytics import YOLO
 import numpy as np
 # face_cascade = cv2.CascadeClassifier("")
 
-model = YOLO("yolov8m.pt")
+model = YOLO("yolov8n.pt")
 
 class VideoCamera(object):
     def __init__(self):
@@ -20,7 +20,7 @@ class VideoCamera(object):
 
         cap = cv2.VideoCapture(0)
 
-        # ret, frame = cap.read()
+        ret, frame = cap.read()
 
         results = model(frame)
 
