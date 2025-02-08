@@ -6,31 +6,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="/tartanhacks-2025/static/css/main.css">
+    <!-- <link rel="stylesheet" href="/tartanhacks-2025/static/css/main.css"> -->
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <!-- <link rel="script" href="tartanhacks-2025/static/js/main.js"> -->
     <title>DeepClean</title>
 </head>
 <body>
+    <div id="title">
 
-    <div id="side_area">
-        <div id="title">
+        <h1>DeepClean</h1>
+        <p>Welcome to DeepClean, cleaning our oceans one piece of trash at a time!</p>
 
-            <h1>DeepClean</h1>
-    
-        </div>
-    
-        <div id="prompt">
-            <h3>Upload Image here</h3>
-            <form action="upload.php" method="post" enctype="multipart/form-data">
-                <label for="imageUpload">Choose an image to upload:</label>
-                <input type="file" id="imageUpload" name="image" accept="image/*">
-                <input type="submit" value="Upload Image">
-            </form>
-        </div>
     </div>
 
-    
+    <div id="side_area">
+        <p></p>
+    </div>
 
-    <!-- <iframe class="bg-video" src="https://www.youtube.com/embed/jWRSGmM9Cig?autoplay=1" frameBorder="0" allowFullScreen allow="autoplay"/> -->
+    <div id="cv_container">
+        <div id="opencv">
+            <img id="cv" src="{{ url_for('video_feed') }}" alt="">
+        </div>
+    </div>
+    
     
 </body>
 </html>
