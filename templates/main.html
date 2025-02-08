@@ -7,26 +7,90 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     
     <!-- <link rel="stylesheet" href="/tartanhacks-2025/static/css/main.css"> -->
-     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    <!-- <link rel="script" href="tartanhacks-2025/static/js/main.js"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script defer src="{{ url_for('static',filename='js/main.js')}}"></script>
     <title>DeepClean</title>
 </head>
 <body>
-    <div id="title">
+    
+    <nav>Navigation</nav>
 
-        <h1>DeepClean</h1>
-        <p>Welcome to DeepClean, cleaning our oceans one piece of trash at a time!</p>
-
+    <div class="scroll_indicator">
+        <a href="#home" class="active" data-section="Home"></a>
+        <a href="#project" data-section="Project"></a>
+        <a href="#about" data-section="About"></a>
     </div>
 
-    <div id="side_area">
-        <p></p>
-    </div>
+    <div>
+        <section id="home">
+            <!-- <div id="top_area"> -->
+                <div id="side_area">
+                    <div id="title">
 
-    <div id="cv_container">
-        <div id="opencv">
-            <img id="cv" src="{{ url_for('video_feed') }}" alt="">
-        </div>
+                        <h1>DeepClean✨</h1>
+                        <p>Welcome to DeepClean, cleaning our oceans one piece of trash at a time!</p>
+                        <form action="{{result}}">
+                            <input type="submit" value="Get Started">
+                        </form>
+                    </div>
+                </div>
+
+                <div id="right_side">
+
+                </div>
+            <!-- </div> -->
+        </section>
+        <section id="project">
+            <div id="info_area">
+                <ul class="gallery">
+                    <li id="outer">
+                        <h3>Our Mission</h3>
+                        <p>With the ever expanding issue of trash in our oceans, DeepClean's goal is to employ
+                            computer vision technology with drones and other autonomous equipment to
+                            detect and collect marine debris.
+                        </p>
+                        <img src="{{url_for('static',filename='images/trash1.png')}}" alt="Picture of the Great Pacific Garbage Patch from https://www.hydrotech-group.com/blog/it-is-so-big-that-you-can-see-it-on-maps-take-a-look-at-the-great-pacific-garbage-patch">
+                    </li>
+                    <li id="outer">
+                        <h3>33-Billion Pounds of Marine Debris</h3>
+                        <br><br>
+                        <p>According to the <a href="https://usa.oceana.org/">Oceana Campaign</a>, 
+                            every year, an estimated 33-Billion pounds of plastic are deposited 
+                            into the ocean.
+                        each year. These plastics have the potential to drastically harm human and marine life, 
+                        creating a global issue in need of resolution.</p>
+
+                        <p>One of the biggest challenges with cleaning marine debris is their remote
+                            location from shores and landmasses. As such, manned study and clean-up is 
+                            incredibly difficult.
+                        </p>
+                        <p>Our mission is to clean the oceans with unmanned machines equipped with computer vision
+                            technology. By removing the need for direct human observation, the process
+                            of cleaning the world's oceans can be made that much easier.
+                        </p>
+                    </li>
+                    <li id="outer">
+                        <h3>Computer Vision</h3>
+                        <br>
+                        <img id="open" src="{{url_for('static',filename='images/opencv_logo.png')}}" alt="The OpenCV Logo accessed from https://opencv.org/media-kit/">
+                        <p> DeepClean utilizes OpenCV to scan a live video feed and return the location
+                            of any trash detected. This location data will be processed by other autonomous
+                            machines to find and clean debris. Together, our technology can automate the
+                            collection of trash in the ocean.
+                        </p>
+                        
+                    </li>
+                    
+                </ul>
+            </div>
+            
+                
+        </section>
+        <section id="about">
+            <div id="about_us">
+                <h1>Hello!</h1>
+            </div>
+        </section>
     </div>
     
     
