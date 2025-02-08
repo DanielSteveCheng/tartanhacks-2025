@@ -6,7 +6,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def main_page():
-    return render_template("main.html")
+    return render_template("main.html", result = url_for("deepClean"))
+
+@app.route("/deepclean")
+def deepClean():
+    return render_template("result.html")
 
 def gen(camera):
     while True:
@@ -28,4 +32,3 @@ def video_feed():
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port='5000', debug=True)
-
