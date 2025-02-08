@@ -1,0 +1,26 @@
+body {
+    /* background-color: black; */
+    background-image: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDJ2NmtvaDY2cmY2MGpqeTNxZ3pta3JwY3FneDhkZ3E4ZDlhYW5yNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/X4fPTLm2TCtkNiJnhE/giphy.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    margin: 0;
+}
+
+#title {
+    font-family: "Manrope", serif; 
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+  h1,h3 {
+    color: white;
+  }
+
+#side_area {
+    max-width: 50%;
+    background-color: black;
+    height: 100%;
+    opacity: 50%;
+}
