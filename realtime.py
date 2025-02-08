@@ -23,7 +23,7 @@ while True:
             if confidence > 0.4:
                 cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
                 
-                cv2.putText(frame, f'{model.names[label]}: {confidence:.2f}', (x1, y1 - 10),
+                cv2.putText(frame, f'{model.names[int(label)]}: {confidence:.2f}', (x1, y1 - 10),
                             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
     cv2.imshow('Trash Detection (Real-time)', frame)

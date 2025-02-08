@@ -1,0 +1,49 @@
+body {
+    background-image: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDJ2NmtvaDY2cmY2MGpqeTNxZ3pta3JwY3FneDhkZ3E4ZDlhYW5yNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/X4fPTLm2TCtkNiJnhE/giphy.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    margin: 0;
+}
+
+#title {
+    font-family: "Manrope", serif; 
+    font-size: 50px;
+    /* margin-top: auto; */
+    margin-left: 5%;
+    margin-top: 15rem;
+    position: absolute;
+    z-index: 1;
+}
+
+h1,h3,p {
+    color: white;
+}
+
+#title p {
+    font-size: 30px;
+    max-width: 40rem;
+}
+
+#side_area {
+    /* position: absolute; */
+    width: 50rem;
+    background-color: black;
+    height: 100%;
+    opacity: 50%;
+    z-index: 5;
+    float: left;
+}
+
+#cv_container {
+    float: left;
+    width: 40%;
+}
+
+#cv {
+    margin-top: 40%;
+    float:right;
+    width: 40rem;
+    
+}
