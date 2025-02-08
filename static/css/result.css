@@ -1,0 +1,60 @@
+#cv_container img{
+    display: block;
+    margin: 0 auto 0 0;
+    text-align: center;
+    height: 100%;
+    float: left;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    background-image:
+
+    linear-gradient(
+                    rgba(0, 0, 0, 0), 
+                    rgba(0, 0, 0, 0.9)
+                ), 
+         url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDJ2NmtvaDY2cmY2MGpqeTNxZ3pta3JwY3FneDhkZ3E4ZDlhYW5yNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/X4fPTLm2TCtkNiJnhE/giphy.gif');
+    
+         background-size: cover;
+    background-repeat: space;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+ul {
+    float: left;
+    margin-top: 1rem;
+    list-style-type: none;
+}
+
+h1,p{
+    
+    color: white;
+    font-family: "Manrope", serif; 
+    max-width: 400px;
+}
+
+input[type=submit] {
+    background-color: black;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: "Manrope", serif; 
+    font-size: 25px;
+    transition: all 400ms ease;
+}
+
+input[type=submit]:hover{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 16px 30px;
+    transition: all 400ms ease;
+}

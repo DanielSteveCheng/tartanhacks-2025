@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for, request, redirect, Response
 from camera import VideoCamera
+import cv2
 
 app = Flask(__name__)
 
@@ -10,11 +11,14 @@ def main_page():
 
 @app.route("/deepclean")
 def deepClean():
-    return render_template("result.html")
+    return render_template("result.html", home = url_for("main_page"))
 
 def gen(camera):
     while True:
         frame = camera.get_frame()
+        # timer = cv2.getTickCount()
+        # fps = cv2.getTickFrequency()/(cv2.getTickCount() - timer)
+        # cv2.putText(frame, str(int(fps)), (75,58), cv2.FONT_HERSHEY_COMPLEX,0.7,(0,255,0),2)
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame
                + b'\r\n\r\n')
